@@ -200,7 +200,7 @@ int main(int argc, char *argv[])
 	genl->cmd = CTRL_CMD_GETFAMILY;
 	genl->version = 1;
 
-	mnl_attr_put_u32(nlh, CTRL_ATTR_FAMILY_ID, GENL_ID_CTRL);
+	mnl_attr_put_u16(nlh, CTRL_ATTR_FAMILY_ID, GENL_ID_CTRL);
 	if (argc >= 2)
 		mnl_attr_put_strz(nlh, CTRL_ATTR_FAMILY_NAME, argv[1]);
 	else
